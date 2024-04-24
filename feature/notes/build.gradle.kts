@@ -1,9 +1,15 @@
 plugins {
-    id("java-library")
-    alias(libs.plugins.jetbrainsKotlinJvm)
+    `android-library`
+    `kotlin-android`
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+apply<MainGradlePlugin>()
+
+android {
+    namespace = "com.msoula.noteappclean.feature.notes"
+}
+
+dependencies {
+    // Core
+    implementation(libs.runtime)
 }
